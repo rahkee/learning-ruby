@@ -12,5 +12,8 @@
   <p>
     <strong>Author:</strong>
     <%= article.author %>
+
+    <% name = [%w[Anonymous 0], %w[Fred 1], %w[Steve 2]]. find { |inner_array| inner_array[1] == article.author } %>
+    <%= name[0] %>
   </p>
 </div>

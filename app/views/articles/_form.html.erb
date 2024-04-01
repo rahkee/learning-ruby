@@ -23,7 +23,7 @@
 
   <div>
     <%= form.label :author, style: "display: block" %>
-    <%= form.text_field :author %>
+    <%= form.select :author, [["Anonymous", 0], ["Fred", 1], ["Steve", 2]], prompt: "Select an Author" %>
   </div>
 
   <div>
