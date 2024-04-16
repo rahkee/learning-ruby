@@ -23,12 +23,14 @@
 
 <div id="authors" class="flex flex-wrap gap-5">
   <% @authors.each do |author| %>
-    <div class="flex flex-col gap-5 p-10 border rounded transition-all flex-1 hover:border-neutral-800 hover:shadow">
+    <div class="flex flex-col gap-5 p-10 border rounded min-w-[320px] transition-all flex-1 hover:border-neutral-800 hover:shadow">
       <%= render author %>
 
-      <%= link_to author, class: "sm-btn sm-btn-tertiary" do %>
-        <i class="fa-light fa-address-card"></i> View Author
-      <% end %>
+      <div class="flex">
+        <%= link_to author, class: "sm-btn sm-btn-tertiary" do %>
+          <i class="fa-light fa-address-card"></i> View Author
+        <% end %>
+      </div>
     </div>
   <% end %>
 </div>
