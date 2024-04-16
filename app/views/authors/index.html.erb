@@ -1,4 +1,13 @@
-<p style="color: green"><%= notice %></p>
+<% if notice.present? %>
+  <div class="sm-alert sm-alert-success">
+    <div class="flex items-center justify-between gap-5">
+      <div class="icon-container">
+        <i class="fa-solid fa-check text-xl"></i>
+      </div>
+      <p class="flex-1"><%= notice %></p>
+    </div>
+  </div>
+<% end %>
 
 <h1>Authors</h1>
 

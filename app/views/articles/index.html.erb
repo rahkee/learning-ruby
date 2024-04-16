@@ -1,14 +1,32 @@
-<p style="color: green"><%= notice %></p>
+<% if notice.present? %>
+  <div class="sm-alert sm-alert-success">
+    <div class="flex items-center justify-between gap-5">
+      <div class="icon-container">
+        <i class="fa-solid fa-check text-xl"></i>
+      </div>
+      <p class="flex-1"><%= notice %></p>
+    </div>
+  </div>
+<% end %>
 
-<h1>Articles</h1>
+<header class="flex flex-col gap-5">
+  <div class="flex justify-center">
+    <div class="flex flex-1 justify-center pl-[147px]">
+      <h1>List of Articles</h1>
+    </div>
 
-<div id="articles">
+    <%= link_to new_article_path, class: "sm-btn sm-btn-outline" do %>
+      <i class="fa-light fa-pen-nib"></i> Write an Article
+    <% end %>
+  </div>
+  
+  <hr />
+</header>
+
+<div id="articles" class="flex flex-wrap gap-5">
   <% @articles.each do |article| %>
     <%= render article %>
-    <p>
-      <%= link_to "Show this article", article %>
-    </p>
   <% end %>
 </div>
 
-<%= link_to "New article", new_article_path %>
+

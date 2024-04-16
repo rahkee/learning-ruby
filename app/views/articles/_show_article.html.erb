@@ -1,16 +1,16 @@
-<div id="<%= dom_id article %>">
-  <p>
-    <strong>Title:</strong>
-    <%= article.title %>
-  </p>
+<div id="<%= dom_id article %>" class="flex flex-col gap-5">
+
+  <div class="flex flex-col gap-2.5">
+    <h1>
+      <%= article.title %>
+    </h1>
+
+    <p>
+      By <strong><%= article.author.full_name %></strong> on <em><%= article.created_at.strftime("%B %d, %Y") %></em>
+    </p>
+  </div>
 
   <p>
-    <strong>Body:</strong>
     <%= article.body %>
-  </p>
-
-  <p>
-    <strong>Author:</strong>
-    <%= article.author.full_name %>
   </p>
 </div>

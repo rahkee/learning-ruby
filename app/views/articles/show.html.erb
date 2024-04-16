@@ -1,10 +1,30 @@
-<p style="color: green"><%= notice %></p>
+<% if notice.present? %>
+  <div class="sm-alert sm-alert-success">
+    <div class="flex items-center justify-between gap-5">
+      <div class="icon-container">
+        <i class="fa-solid fa-check text-xl"></i>
+      </div>
+      <p class="flex-1"><%= notice %></p>
+    </div>
+  </div>
+<% end %>
+
+<header class="flex gap-5">
+  <%= link_to articles_path, class: "sm-btn sm-btn-link" do %>
+    <i class="fa-light fa-chevron-left"></i> Back to Articles  
+  <% end %>
+</header>
 
 <%= render "show_article", article: @article %>
 
-<div>
-  <%= link_to "Edit this article", edit_article_path(@article) %> |
-  <%= link_to "Back to articles", articles_path %>
+<hr />
 
-  <%= button_to "Destroy this article", @article, method: :delete %>
+<div class="flex gap-2.5">
+  <%= button_to @article, method: :delete, class: "sm-btn sm-btn-delete" do %>
+    <i class="fa-light fa-trash-can"></i> Delete
+  <% end %>
+
+  <%= link_to edit_article_path(@article), class: "sm-btn sm-btn-tertiary" do %>
+    <i class="fa-light fa-edit"></i> Edit this Article
+  <% end %>  
 </div>

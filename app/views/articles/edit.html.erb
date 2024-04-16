@@ -1,10 +1,11 @@
-<h1>Editing article</h1>
+<header class="flex gap-5 justify-between items-center">
+  <%= link_to articles_path, class: "sm-btn sm-btn-link" do %>
+    <i class="fa-light fa-chevron-left"></i> Back to Articles  
+  <% end %>
+
+  <%= link_to "Show this article", @article, class: "sm-btn sm-btn-outline" %>
+</header>
+
+<h1>Editing Article</h1>
 
 <%= render "form", article: @article %>
-
-<br>
-
-<div>
-  <%= link_to "Show this article", @article %> |
-  <%= link_to "Back to articles", articles_path %>
-</div>
