@@ -9,19 +9,17 @@
   </div>
 <% end %>
 
-<header class="flex flex-col gap-5">
-  <div class="flex justify-center">
-    <div class="flex flex-1 justify-center pl-[147px]">
-      <h1>List of Articles</h1>
-    </div>
-
-    <%= link_to new_article_path, class: "sm-btn sm-btn-outline" do %>
-      <i class="fa-light fa-pen-nib"></i> Write an Article
-    <% end %>
+<header class="flex justify-center">
+  <div class="flex flex-1 justify-center pl-[147px]">
+    <h1>List of Articles</h1>
   </div>
-  
-  <hr />
+
+  <%= link_to new_article_path, class: "sm-btn sm-btn-outline" do %>
+    <i class="fa-light fa-pen-nib"></i> Write an Article
+  <% end %>
 </header>
+
+<hr />
 
 <div id="articles" class="flex flex-wrap gap-5">
   <% @articles.each do |article| %>

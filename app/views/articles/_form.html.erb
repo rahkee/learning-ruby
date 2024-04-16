@@ -12,7 +12,7 @@
   <% end %>
 
   <fieldset class="flex flex-col flex-1 gap-1">
-    <%= form.label :title, style: "display: block" %>
+    <%= form.label :title %>
 
     <div class="sm-input-container">
       <%= form.text_field :title %>
@@ -28,7 +28,7 @@
   </fieldset>
 
   <fieldset class="flex flex-col flex-1 gap-1">
-    <%= form.label :author, style: "display: block" %>
+    <%= form.label :author %>
 
     <div class="sm-input-container">
       <%= form.collection_select :author_id, Author.all, :id, :full_name, prompt: "Select an Author" %>
@@ -38,8 +38,6 @@
   <hr />
 
   <div class="flex">
-    <%= form.submit do %>
-      <i class="fa-light fa-newspaper"></i> Publish Article
-    <% end %>
+    <%= form.submit %>
   </div>
 <% end %>

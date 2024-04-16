@@ -1,10 +1,11 @@
-<h1>Editing author</h1>
+<header class="flex gap-5 justify-between items-center">
+  <%= link_to authors_path, class: "sm-btn sm-btn-link" do %>
+    <i class="fa-light fa-chevron-left"></i> Back to authors
+  <% end %>
+
+  <%= link_to "Show this author", @author, class: "sm-btn sm-btn-outline" %>
+</header>
+
+<h1>Editing Author</h1>
 
 <%= render "form", author: @author %>
-
-<br>
-
-<div>
-  <%= link_to "Show this author", @author %> |
-  <%= link_to "Back to authors", authors_path %>
-</div>

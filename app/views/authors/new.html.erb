@@ -1,7 +1,9 @@
-<h1>New author</h1>
+<header class="flex gap-5">
+  <%= link_to authors_path, class: "sm-btn sm-btn-link" do %>
+    <i class="fa-light fa-chevron-left"></i> Back to authors
+  <% end %>
+</header>
+
+<h1>Create a New Author</h1>
 
 <%= render "form", author: @author %>
-
-<div>
-  <%= link_to "Back to authors", authors_path %>
-</div>
