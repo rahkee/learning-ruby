@@ -9,12 +9,8 @@
   </div>
 
   <div class="flex flex-1">
-    <p style="width: 100%;
-           overflow: hidden;
-           -webkit-box-orient: vertical;
-           -webkit-line-clamp: 5;
-           display: -webkit-box;">
-      <%= article.body %>
+    <p>
+      <%= truncate(article.body, length: 150) %>
     </p>
   </div>
 

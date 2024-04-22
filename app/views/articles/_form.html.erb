@@ -23,7 +23,7 @@
     <%= form.label :body %>
 
     <div class="sm-input-container">
-      <%= form.text_field :body %>
+      <%= form.text_area :body %>
     </div>
   </fieldset>
 
@@ -38,6 +38,8 @@
   <hr />
 
   <div class="flex">
-    <%= form.submit %>
+    <%= form.submit class: "sm-btn sm-btn-primary" do %>
+      Hello
+    <% end %>
   </div>
 <% end %>
