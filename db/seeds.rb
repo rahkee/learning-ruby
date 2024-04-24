@@ -9,11 +9,11 @@
 #   end
 
 authors = Author.create([
-    {first_name: 'John', last_name: 'Doe', age: 25}, 
-    {first_name: 'Jane', last_name: 'Doe', age: 22}, 
-    {first_name: 'Alice', last_name: 'Smith', age: 30}, 
-    {first_name: 'Bob', last_name: 'Smith', age: 35}, 
-    {first_name: 'Charlie', last_name: 'Brown', age: 40}
+    {first_name: 'John', last_name: 'Doe'}, 
+    {first_name: 'Jane', last_name: 'Doe'}, 
+    {first_name: 'Alice', last_name: 'Smith'}, 
+    {first_name: 'Bob', last_name: 'Smith'}, 
+    {first_name: 'Charlie', last_name: 'Brown'}
 ])
 
 articles = Article.create([

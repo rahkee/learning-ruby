@@ -16,4 +16,9 @@ module.exports = {
         require('@tailwindcss/typography'),
         require('@tailwindcss/container-queries'),
     ],
+    safelist: [
+        { pattern: /rounded-full/ },
+        { pattern: /(justify|items)-center/ },
+        { pattern: /text-white/ },
+    ],
 };

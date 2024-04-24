@@ -7,14 +7,17 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag 'https://cdn.strongmind.com/backpack-ui/latest/assets/css/BackpackUI.css' %>
+    <%== @theme_css %>
     
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body class="strongmind-ui">
+    <%== @top_navbar_html %>  
     <main class="flex flex-col gap-5 p-10 mx-auto">
       <%= yield %>
     </main>
+    <%== @bottom_navbar_html %>  
   </body>
 </html>
