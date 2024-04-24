@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+  return if defined? Rails::Generators
+
+  devise_scope :user do
+      authenticated do
+      end
+    end
   resources :authors
   resources :articles
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

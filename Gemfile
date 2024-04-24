@@ -67,3 +67,17 @@ group :test do
 end
 
 gem "tailwindcss-rails", "~> 2.4"
+
+gem "strongmind-auth", "~> 1.1"
+
+gem "devise", "~> 4.9"
+
+gem "omniauth", "~> 2.1"
+
+gem "omniauth_openid_connect", "~> 0.7.1"
+
+gem "omniauth-rails_csrf_protection", "~> 1.0"
+
+gem "dotenv-rails", "~> 3.1"
+
+gem "sentry-rails", "~> 5.17"
