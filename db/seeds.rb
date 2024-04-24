@@ -12,7 +12,7 @@ authors = Author.create([
     {first_name: 'John', last_name: 'Doe'}, 
     {first_name: 'Jane', last_name: 'Doe'}, 
     {first_name: 'Alice', last_name: 'Smith'}, 
-    {first_name: 'Bob', last_name: 'Smith'}, 
+    {first_name: 'Bob', last_name: 'Smitherington'}, 
     {first_name: 'Charlie', last_name: 'Brown'}
 ])
 
